@@ -166,6 +166,7 @@ html {
 
 .section-list-item {
     max-width: 226px;
+    flex-direction: column;
 }
 
 .section-list-item:not(:last-child) {
@@ -384,6 +385,10 @@ html {
     height: 150px;
 }
 
+.contact-link {
+    flex-direction: column;
+}
+
 .section-contacts-list-item-text {
     font-weight: 700;
     font-size: 24px;
@@ -566,6 +571,7 @@ html {
     }
 
     .section-list-item {
+        flex-direction: row;
         max-width: 600px;
     }
 
@@ -647,6 +653,7 @@ html {
     }
 
     .contact-link {
+        flex-direction: row;
         align-items: center;
     }
 }
