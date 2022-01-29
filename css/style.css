@@ -68,6 +68,7 @@ html {
   }
 
   .btn {
+    transition: 1s;
     padding: 33px;
     margin-bottom: 100px;
     background: #FFFFFF;
@@ -79,7 +80,7 @@ html {
   }
 
   .btn:hover {
-    box-shadow: 0px 0px 9px 7px rgba(253, 251, 251, 0.5);
+    box-shadow: 0px 0px 18px 14px rgba(253, 251, 251, 0.5);
   }
 
   /* header */
@@ -96,13 +97,19 @@ html {
     height: 116px;
   }
 
+  .nav-list-item {
+    padding: 5px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+
   .nav-list-item:not(:last-child) {
     margin-right: 54px;
   }
 
   .nav-list-item:hover {
-      font-weight: 700;
-      margin-right: 53px;
+
+      border-bottom: 3px solid #FFFFFF;
   }
 
   /* hero */
@@ -365,6 +372,10 @@ html {
 
 .section-contacts-list-item {
     max-width: 150px;
+    text-align: center;
+}
+
+.section-contacts-list-item:not(:first-child) {
     margin-left: 62px;
 }
 
@@ -384,11 +395,11 @@ html {
 /* footer */ 
 
 .footer {
-    margin-left: 222px;
+    margin-left: 180px;
     margin-bottom: 36px;
 }
 
-.footer-text:not(:last-child) {
+.footer-text:not(:first-child) {
     margin-left: 20px;
 }
 
@@ -460,21 +471,183 @@ html {
   }
   .close:hover {background: #fdfdfd;}
 
-  @media (max-width: 768px) {
-    body {
-        min-width: 768px !important;
+
+/* adaptive */
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 940px;
+    }
+
+    .section-btn {
+        margin-left: 320px;
+    }
+
+    .section-sub-subtitle {
+        margin-left: 320px;
+    }
+
+    .project-list {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .project-list-item:not(:nth-child(2n)) {
+        margin-right: 0;
+    }
+
+    .article-title,
+    .main-article-title {
+        width: 250px;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    .card-1 {
+        width: 377px;
+        height: 402px;
+        padding-top: 236px;
+    }
+
+    .card-2,
+    .card-3 {
+        padding-top: 38px;
+    }
+
+    .article {
+        width: 467px;
+        height: 178px;
+        border-radius: 50px;
+    }
+
+    .section-contacts-list {
+        margin-left: 50px;
     }
     
+    .footer {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
     .container {
-        width: 768px;
-        margin-left: 108px !important;
-      }
-      
-       .main {
+        width: 720px;
+    }
+
+    .main {
         margin-bottom: 37px;
-        background-image: linear-gradient(89.93deg, #000000 -71.78%, rgba(0, 0, 0, 0.76) 0.31%, rgba(0, 0, 0, 0) 11.04%, rgba(0, 0, 0, 0) 93.23%), url("../img/hero-bg.jpg");
+        background-image: linear-gradient(0.46deg, #000000 -32.65%, rgba(0, 0, 0, 0.76) 22.89%, rgba(0, 0, 0, 0) 31.16%, rgba(0, 0, 0, 0) 94.48%), url("../img/hero-bg-1024.png");
         background-repeat: no-repeat;
-        background-position: left top;
-        background-size: contain;  
-      }
-  }
+        background-position: top;
+        background-size: cover;
+    }
+
+    .hero-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .hero-btn {
+        margin-left: 150px;
+    }
+
+    .section-list {
+        flex-direction: column;
+    }
+
+    .section-list-item {
+        max-width: 600px;
+    }
+
+    .lang-img {
+        margin-right: 50px;
+    }
+
+    .section-btn {
+        margin-left: 160px;
+    }
+
+    .section-sub-subtitle {
+        margin-left: 200px;
+    }
+
+    .project-list {
+        margin-bottom: 34px;
+    }
+
+    .swiper {
+        width: 500px;
+        height: 200px;
+    }
+
+    .section-blog {
+        display: none;
+    }
+
+    .footer {
+        margin-left: 100px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 540px;
+    }
+
+    .nav-list {
+        font-size: 12px;
+    }
+
+    .nav-list-item:not(:last-child) {
+        margin-right: 24px;
+    }
+  
+    .main {
+        background-image: none;
+    }
+
+    .hero-btn {
+        margin-left: 100px;
+    }
+
+    .section-list-item {
+        margin-bottom: 20px;
+    }
+
+    .lang-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section-btn {
+        margin-left: 110px;
+    }
+
+    .section-sub-subtitle {
+        margin-left: 100px;
+    }
+
+    .section-contacts-list {
+        flex-direction: column;
+    }
+
+    .section-contacts-list-item:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .contact-link {
+        align-items: center;
+    }
+}
+/* end adaptive */
