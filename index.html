@@ -10,8 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main-style.css" id="theme-link">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" id="jquery-core-js"></script>
+  <script src="js/main.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
@@ -47,6 +49,26 @@
             </li>
           </ul>
         </nav>
+        <div class="sliders flex">
+          <div class="theme-slider flex">
+            <div class="theme-name">
+              Переключатель тем
+            </div>
+            <label class="switch">
+              <input type="checkbox" class="btn-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="theme-slider flex">
+            <div class="theme-name">
+              Включи снежок
+            </div>
+            <label class="switch snow">
+              <input type="checkbox" id="snowswitcher">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
       </div>
       <div class="hero">
         <h2 class="hero-subtitle subtitle title-reset">
@@ -103,6 +125,7 @@
       <button class="section-btn btn btn-reset">
         <a href="https://github.com/AndreyPantyukhin" target="_blank" class="section-btn-link flex">
           <img src="img/GitLogo-01.svg" class="git-logo" alt="GitHub">
+          <img src="img/GitLogo-white-01.svg" class="git-logo-white" alt="GitHub">
           <div class="section-btn-link-text">
             Мой GitHub
           </div>
@@ -127,7 +150,6 @@
             <div class="project-list-item-title">Lucifer: Season 5 Trailer</div>
           </a>
           <!-- Временный костыль пока чиню сайты --> 
-
           <div id="zatemnenie">
             <div id="okno">
               УПС! Сайт на доработке. Подробнее смотрите на странице <a href="https://github.com/AndreyPantyukhin" target="_blank"><b>GitHub</b></a>
@@ -152,19 +174,18 @@
           </a>
         </li>
         <li class="project-list-item smth">
-          <a href="#" class="project-link">
-            <div class="project-list-item-title">Что-то намечается...</div>
+          <a href="progects.html" class="project-link">
+            <div class="project-list-item-title">Другие проекты</div>
           </a>
         </li>
       </ul>
       <h3 class="section-subtitle subtitle title-reset">
         Видео
       </h3>
-      <!-- Slider main container -->
+      <!-- Основной контейнер слайдера -->
       <div class="swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
+          <!-- Слайды -->
           <div class="swiper-slide">
             <a href="https://www.youtube.com/watch?v=Lfgpun2rbaI" target="_blank" class="swiper-link">
               <img src="img/AW-VID.png" alt="video-1">
@@ -181,35 +202,31 @@
             </a>
           </div>
         </div>
-        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
+        <!-- Кнопки навигации -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <!-- If we need scrollbar -->
+        <!-- Скролл -->
         <div class="swiper-scrollbar"></div>
       </div>
 
       <script>
         const swiper = new Swiper('.swiper', {
-      // Optional parameters
+      // Параметры
       direction: 'vertical',
       loop: true,
     
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
     
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     
-      // And if we need scrollbar
       scrollbar: {
         el: '.swiper-scrollbar',
       },
