@@ -18,7 +18,7 @@ html {
   }
   
   body {
-    min-width: 1500px;
+    max-width: 1500px;
     font-family: "Montserrat", sans-serif;
     color: #fff;
     background-color: #000;
@@ -54,7 +54,7 @@ html {
   }
   
   .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-left: 44px;
   }
@@ -300,10 +300,10 @@ html {
 .project-list {
     flex-wrap: wrap;
     margin-bottom: 84px;
+    margin-left: 90px;  
 }
 
 .project-list-item {
-    padding: 81px 94px;
     margin-bottom: 40px;
 }
 
@@ -312,9 +312,10 @@ html {
 }
 
 .project-list-item-title {
-    max-width: 317px;
+    width: 420px;
+    padding: 80px 27px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
     text-align: center;
     color: #FFFFFF;
@@ -324,34 +325,74 @@ html {
     color: #000;
 }
 
+.gr {
+  background-image: url("../img/grad-blur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.25s;
+}
+
+.gr:hover {
+  background-image: url("../img/grad-page.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0px;
+}
+
+.vf {
+  background-image: url("../img/form-blur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.25s;
+}
+
+.vf:hover {
+  background-image: url("../img/form-page.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0px;
+}
+
+.sa {
+  background-image: url("../img/SASA-blur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.25s;
+}
+
+.sa:hover {
+  background-image: url("../img/SASA-page.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0px;
+}
+
 .sw {
     background-image: url("../img/SW-blur.png");
     background-repeat: no-repeat;
     background-size: contain;
+    transition: 0.25s;
 }
 
-.lu {
-    background-image: url("../img/Luci-blur.png");
+.sw:hover {
+    background-image: url("../img/SW-page.png");
     background-repeat: no-repeat;
     background-size: contain;
+    font-size: 0px;
 }
 
-.hfn {
-    background-image: url("../img/FN-blur.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+.levup {
+  background-image: url("../img/pills-blur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.25s;
 }
 
-.wed {
-    background-image: url("../img/SASA-blur.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.mk {
-    background-image: url("../img/MK-blur.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+.levup:hover {
+  background-image: url("../img/pills-page.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0px;
 }
 
 .smth {
@@ -600,4 +641,71 @@ html {
     padding-bottom: 36px;
   }
 
+/* adaptive */
+
+@media (max-width: 1024px) {
+  body {
+    max-width: 100%;
+  }
   
+  .container {
+    max-width: 1000px;
+  }
+
+  .main {
+    background-image: url("../img/hero-bg-1024.png");
+  }
+  
+  .nav-list-item:not(:last-child) {
+    width: 100px;
+    margin-right: 14px;
+  }
+
+  .sliders {
+    margin-left: 50px;
+  }
+
+  .section-text {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-list {
+    margin-left: 50px;
+    flex-direction: column;
+  }
+
+  .section-list-item {
+    flex-direction: row;
+  }
+
+  .section-list-item-text {
+    min-width: 500px;
+  }
+
+  .section-btn {
+    margin-left: 350px;
+  }
+
+  .section-sub-subtitle {
+    margin-left: 370px;
+  }
+
+  .project-list {
+    justify-content: center;
+  }
+
+  .section-blog {
+    display: none;
+  }
+
+  .section-contacts-list {
+    margin-left: 90px;
+  }
+
+  .footer {
+    margin-left: 100px;
+  }
+}
+
+/* end adaptive */  
