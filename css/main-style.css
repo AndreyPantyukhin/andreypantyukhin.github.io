@@ -18,7 +18,7 @@ html {
   }
   
   body {
-    max-width: 1500px;
+    max-width: 1920px;
     font-family: "Montserrat", sans-serif;
     color: #fff;
     background-color: #000;
@@ -643,6 +643,23 @@ html {
 
 /* adaptive */
 
+@media (max-width: 1920px) {
+  .main {
+    background-image: url('../img/projects-bg.jpg');
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1600px) {
+  .main {
+    margin-bottom: 37px;
+    background-image: linear-gradient(89.93deg, #000000 -71.78%, rgba(0, 0, 0, 0.76) 0.31%, rgba(0, 0, 0, 0) 11.04%, rgba(0, 0, 0, 0) 93.23%), url("../img/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+}
+
 @media (max-width: 1024px) {
   body {
     max-width: 100%;
@@ -654,6 +671,12 @@ html {
 
   .main {
     background-image: url("../img/hero-bg-1024.png");
+  }
+
+  .lang-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
   }
   
   .nav-list-item:not(:last-child) {
@@ -671,7 +694,8 @@ html {
   }
 
   .section-list {
-    margin-left: 50px;
+    margin-top: 30px;
+    margin-left: 120px;
     flex-direction: column;
   }
 
@@ -688,11 +712,32 @@ html {
   }
 
   .section-sub-subtitle {
-    margin-left: 370px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .project-list {
+    flex-direction: column;
     justify-content: center;
+    margin-top: 50px;
+  }
+
+  .project-list-item:not(:nth-child(2n)) {
+    margin-right: 0;
+  }
+
+  .project-list-item {
+    margin-left: 180px;
+  }
+
+  .project-list-item-title {
+    width: 420px;
+    padding: 90px 47px;
+  } 
+
+  .swiper {
+    width: 750px;
+    height: 450px;
   }
 
   .section-blog {
@@ -705,6 +750,206 @@ html {
 
   .footer {
     margin-left: 100px;
+  }
+}
+
+@media (max-width: 840px) {
+  body {
+    max-width: 100%;
+  }
+  
+  .container {
+    max-width: 800px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  .sliders {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .theme-slider:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 15px;
+  }
+
+  .hero-text {
+    padding-right: 50px;
+  }
+
+  .hero-btn {
+    margin-bottom: 0px;
+  }
+
+  .section-text {
+    max-width: 600px;
+  }
+
+  .section-list {
+    margin-left: 20px;
+  }
+
+  .section-btn {
+    margin-left: 250px;
+  }
+
+  .project-list-item {
+    margin-left: 40px;
+  }
+
+  .swiper {
+    width: 650px;
+    height: 450px;
+  }
+
+  .contact-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-contacts-list {
+    margin-left: 45px;
+  }
+
+  .section-contacts-list-item-text {
+    font-size: 16px;
+  }
+
+  .footer {
+    margin-left: 50px;
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  body {
+    max-width: 100%;
+  }
+  
+  .container {
+    max-width: 400px;
+    padding-left: 14px;
+  }
+
+  .header {
+    font-size: 10px;
+  }
+
+  .nav-list-item:not(:last-child) {
+    width: 50px;
+    margin-right: 14px;
+  }
+
+  .sliders {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 24px;
+    line-height: 1em;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 2em;
+  }
+
+  .hero-text {
+    font-size: 10px;
+    line-height: 2em;
+    padding-bottom: 30px;
+  }
+
+  .btn {
+    padding: 23px;
+    font-size: 12px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .section-text {
+    font-size: 10px;
+  }
+
+  .lang-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .section-list {
+    margin-left: 50px;
+  }
+
+  .section-list-item {
+    align-items: center;
+  }
+
+  .section-list-item-text {
+    margin-left: 5px;
+    min-width: 200px;
+    font-size: 10px;
+    line-height: 2em;
+  }
+
+  .section-btn {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding: 13px;
+  }
+
+  .section-sub-subtitle {
+    font-size: 24px;
+    line-height: 2em;
+  }
+
+  .project-list {
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  .project-list-item-title {
+    width: 200px;
+    font-size: 12px;
+    padding: 28px 13px;
+  }
+
+  .swiper {
+    width: 325px;
+    height: 225px;
+  }
+
+  .section-contacts-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .section-contacts-list-item:not(:first-child) {
+    margin-left: 70px;
+  }
+
+  .section-contacts-list-item:first-child {
+    margin-left: 70px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  .footer-text:not(:last-child) {
+    margin-bottom: 5px;
   }
 }
 
